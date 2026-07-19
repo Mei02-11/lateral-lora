@@ -2,18 +2,12 @@
 
 This repository contains the implementation of **Lateral LoRA**
 
-## Overview
-
 Lateral LoRA is a continual learning framework that enables knowledge transfer between previously learned LoRA adapters through trainable lateral connections.
 
-This implementation is adapted from the experimental framework of the O-LoRA repository. The original task-sequential training pipeline and benchmark configuration are retained, while the learning mechanism has been replaced by the proposed Lateral LoRA method.
 
 ---
 
 ## Requirements
-
-- Python 3.10 or later
-- CUDA-enabled GPU (recommended)
 
 Install the required packages:
 
@@ -25,15 +19,12 @@ pip install -r requirements.txt
 
 ## Pretrained Model
 
-The experiments use the pretrained **T5-Base** model from Hugging Face.
-
-No manual download is required. The model will be downloaded automatically during the first execution when
+The experiments utilised the pre-trained **T5-Base** model from Hugging Face. When the following code is specified, the model is automatically downloaded upon the first execution:
 
 ```text
 --model_name_or_path t5-base
 ```
 
-is specified.
 
 ---
 
@@ -57,9 +48,8 @@ ADAPTER_ROOT = r"C:\lateral_nli_out"
 
 where
 
-- `FIRST_TASK` specifies the first task in the continual learning sequence. Example: Amazon → SST-2 uses "amazon", QQP → MRPC uses "qqp"
-- `ADAPTER_ROOT` specifies the directory where adapters generated during continual learning are saved. Consistent with the run script in Step 2.
-
+- `FIRST_TASK` specifies the first task in the continual learning sequence. Example: Amazon → SST-2 uses "amazon", QQP → MRPC uses "qqp".
+- `ADAPTER_ROOT` specifies the directory where adapters generated when continual learning are saved. Consistent with "output_dir" used in the script from Step 2.
 
 ---
 
@@ -127,27 +117,15 @@ When changing to another continual learning task sequence, update the following 
 | Item | Description |
 |------|-------------|
 | `FIRST_TASK` | The name of the first task in `run_uie_lora_laterallora.py`. |
-| `ADAPTER_ROOT` | Directory used to save and load adapters for the current task sequence. |
-| `--task_config_dir` | Configuration file of the current task (e.g., `configs/lateral_nl_configs/MNLI`, `configs/lateral_nl_configs/RTE`, `configs/lateral_sentiment_configs/amazon`). |
-| `--output_dir` | Directory where the adapter for the current task is saved. For subsequent tasks, this directory is also used to load the adapter generated from the previous task. |
-
-For example, for the Amazon → SST-2 sequence:
-
-- `FIRST_TASK = "amazon"`
-- `ADAPTER_ROOT = C:\lateral_sentiment_out`
-- Task 1:
-  - `--task_config_dir configs/lateral_sentiment_configs/amazon`
-  - `--output_dir C:\lateral_sentiment_out\1-amazon`
-- Task 2:
-  - `--model_name_or_path C:\lateral_sentiment_out\1-amazon\adapter`
-  - `--task_config_dir configs/lateral_sentiment_configs/SST2`
-  - `--output_dir C:\lateral_sentiment_out\2-sst2`
+| `ADAPTER_ROOT` | The directory used to save and load adapters required for the current task sequence. |
+| `--task_config_dir` | The configuration directory for the current task (e.g., `configs/lateral_nl_configs/MNLI`, `configs/lateral_nl_configs/RTE`, `configs/lateral_sentiment_configs/amazon`). |
+| `--output_dir` | The directory where the adapter for the current task is saved. For subsequent tasks, this directory is also used to load the adapter generated from the previous task. |
 
 ---
 
 ## Acknowledgement
 
-This implementation is adapted from the experimental framework of the O-LoRA repository. The task-sequential training pipeline and benchmark configuration are reused, while the proposed Lateral LoRA replaces the original O-LoRA learning mechanism.
+This implementation is adapted from the experimental framework of the O-LoRA repository. It reuses the task-sequence training pipeline and benchmarking configurations while the proposed Lateral LoRA replaces the original O-LoRA learning mechanism.
 
 Original O-LoRA repository:
 
