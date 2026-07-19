@@ -1,0 +1,34 @@
+{
+    "SC": [
+    ],
+    "TC": [   
+    ],
+    "NLI": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "MNLI"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "CB"
+        },
+        {
+            "sampling strategy": "full",
+            "dataset name": "RTE"
+        } 
+    ],
+    "QQP": [  
+    ],
+    "WiC": [ 
+    ],
+    "MultiRC": [ 
+    ],
+    "COPA": [ 
+    ],
+    "BoolQA": [
+        {
+            "sampling strategy": "full",
+            "dataset name": "BoolQA"
+        } 
+    ]
+}
