@@ -1,0 +1,19 @@
+{
+    "epoch": 3.0,
+    "predict_default_exact_match": 80.7237,
+    "predict_default_exact_match_for_MNLI": 80.7237,
+    "predict_default_exact_match_for_NLI": 80.7237,
+    "predict_default_gen_len": 2.8874,
+    "predict_default_global_step": 1125,
+    "predict_default_loss": 0.45551827549934387,
+    "predict_default_rouge1": 80.7237,
+    "predict_default_rouge1_for_MNLI": 80.7237,
+    "predict_default_rouge1_for_NLI": 80.7237,
+    "predict_default_rougeL": 80.7237,
+    "predict_default_rougeL_for_MNLI": 80.7237,
+    "predict_default_rougeL_for_NLI": 80.7237,
+    "predict_default_runtime": 427.1265,
+    "predict_default_samples_per_second": 17.793,
+    "predict_default_steps_per_second": 4.448,
+    "predict_samples": 7600
+}

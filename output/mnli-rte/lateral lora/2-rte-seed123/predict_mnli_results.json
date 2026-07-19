@@ -1,0 +1,19 @@
+{
+    "epoch": 3.0,
+    "predict_mnli_exact_match": 81.0526,
+    "predict_mnli_exact_match_for_MNLI": 81.0526,
+    "predict_mnli_exact_match_for_NLI": 81.0526,
+    "predict_mnli_gen_len": 2.9111,
+    "predict_mnli_global_step": 750,
+    "predict_mnli_loss": 0.43993744254112244,
+    "predict_mnli_rouge1": 81.0526,
+    "predict_mnli_rouge1_for_MNLI": 81.0526,
+    "predict_mnli_rouge1_for_NLI": 81.0526,
+    "predict_mnli_rougeL": 81.0526,
+    "predict_mnli_rougeL_for_MNLI": 81.0526,
+    "predict_mnli_rougeL_for_NLI": 81.0526,
+    "predict_mnli_runtime": 411.3683,
+    "predict_mnli_samples_per_second": 18.475,
+    "predict_mnli_steps_per_second": 4.619,
+    "predict_samples": 7600
+}

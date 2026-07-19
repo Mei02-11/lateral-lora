@@ -1,0 +1,19 @@
+{
+    "epoch": 3.0,
+    "predict_rte_exact_match": 77.9783,
+    "predict_rte_exact_match_for_NLI": 77.9783,
+    "predict_rte_exact_match_for_RTE": 77.9783,
+    "predict_rte_gen_len": 3.5921,
+    "predict_rte_global_step": 750,
+    "predict_rte_loss": 0.2733866572380066,
+    "predict_rte_rouge1": 77.9783,
+    "predict_rte_rouge1_for_NLI": 77.9783,
+    "predict_rte_rouge1_for_RTE": 77.9783,
+    "predict_rte_rougeL": 77.9783,
+    "predict_rte_rougeL_for_NLI": 77.9783,
+    "predict_rte_rougeL_for_RTE": 77.9783,
+    "predict_rte_runtime": 17.6309,
+    "predict_rte_samples_per_second": 15.711,
+    "predict_rte_steps_per_second": 3.97,
+    "predict_samples": 277
+}
